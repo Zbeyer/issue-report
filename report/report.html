@@ -1,0 +1,65 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Report</title>
+</head>
+
+<body>
+<!--<h1>Welcome to Meteor!</h1>-->
+
+{{> lastReport}}
+{{> fileReport}}
+{{> reportList}}
+
+</body>
+
+<template name="lastReport">
+    <div class="lastReport">
+        <span class="plain">It has been:</span>
+        {{#if   lastReportObj.seconds}}
+        <div class="seconds">{{lastReportObj.seconds}} Seconds</div>
+        {{/if}}
+
+        {{#if   lastReportObj.minutes}}
+        <div class="minutes">{{lastReportObj.minutes}} Minutes</div>
+        {{/if}}
+
+        {{#if   lastReportObj.hours}}
+        <div class="hours">{{lastReportObj.hours}} Hours</div>
+        {{/if}}
+
+        {{#if   lastReportObj.days}}
+        <div class="days">{{lastReportObj.days}} Days</div>
+        {{/if}}
+
+        <span class="plain">since last report was logged.</span>
+    </div>
+</template>
+
+<template name="fileReport">
+    <div class="fileReport plain">
+
+        <form>
+            Log A Report:<br>
+            <input type="text" name="newDescription">
+            <input type="submit" value="Log">
+        </form>
+
+    </div>
+</template>
+
+<template name="reportList">
+    <ol class="reportList">
+        {{#each reports}}
+            {{> report}}
+            <hr/>
+        {{/each}}
+    </ol>
+</template>
+
+<template name="report">
+    <li class="report">
+        <div class="date plain">{{formatDate date}}</div>
+        <div><span class="description">{{description}}</span></div>
+    </li>
+</template>
+

@@ -1,0 +1,83 @@
+/* CSS declarations go here */
+
+body {
+    /*font-family: "Lucida Console", Monaco, monospace;*/
+    font-family: “Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 100%;
+    /*
+        Default Font size is 16px
+        Users with low vision–like myself–have a habbit of increasing the default font size.
+        Measuring touch targets at 48px >≈ 9mm bound to em's will increase
+        with font size (3em).
+    */
+    font-size: 100%;
+    margin:0em auto;
+    padding:1em;
+
+    color:#212121;
+}
+.lastReport, .fileReport {
+    border-bottom: 2px solid rgba(44, 44, 44, 0.25);
+}
+
+.lastReport {
+    padding-bottom:1em;
+}
+.fileReport {
+    margin-bottom: 1em;
+    padding:1em;
+}
+
+input {
+    /*Get rid of Safari default Styling*/
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input[type=text], input[type=submit] {
+    box-sizing: border-box;
+    margin: 1em auto;
+    min-height: 3em;
+    min-width:3em;
+}
+
+input[type=text] {
+    width:70%;
+}
+
+input[type=submit] {
+    border:0 none;
+    width:20%;
+    color: #FFFFFF;
+    background-color:#F57C00;
+}
+
+a, span, p {
+    font-size: 1em;
+}
+
+ol {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+hr {
+    width: 100%;
+    text-align: center;
+
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /*border-color: rgba(174, 174, 174, 0.75);*/
+    /*background-image: linear-gradient(to right, rgba(174, 174, 174, 0), rgba(174, 174, 174, 0.75), rgba(174, 174, 174, 0));*/
+}
+
+h1, h2, h3, .attention, .lastReport {
+    color: #F57C00;
+}
+
+.plain {
+    color:#9E9E9E;
+}
